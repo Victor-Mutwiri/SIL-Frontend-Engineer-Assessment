@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import './users.css'
 
 const Users = ({ onProfileClick }) => {
   const [users, setUsers] = useState([]);
@@ -23,11 +24,12 @@ const Users = ({ onProfileClick }) => {
   }, []);
 
   return (
-    <div>
+    <div className='profilenames'>
       <h2>Profile Names</h2>
       <ul>
         {users.map((profile) => (
-          <li key={profile.id}>
+          <li key={profile.id} className='names'>
+            <i className="bi bi-person-circle"></i>
             <a href="#" onClick={() => onProfileClick(profile.id, profile.name)}>{profile.name}</a>
           </li>
         ))}

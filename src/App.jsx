@@ -4,6 +4,7 @@ import Login from "./pages/Login/login";
 import Home from "./pages/Home/Home";
 import Profile from "./pages/Profile/Profile";
 import { UserProvider } from "./components/Usercontext";
+import AlbumDetails from "./components/albumdetails";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
             <Route path="/login" element={<Login/>}/>
             <Route path="/home" element={<Home/>}/>
             <Route path="/profile" element={<Profile/>}/>
+            <Route path="/albums/:albumId" element={<AlbumDetails/>}/>
           </Routes>
         </BrowserRouter>
       </UserProvider>

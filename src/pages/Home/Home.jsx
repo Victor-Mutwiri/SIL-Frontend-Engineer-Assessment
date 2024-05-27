@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import { UserContext } from '../../components/Usercontext';
 import './Home.css';
-import { Link } from 'react-router-dom';
+/* import { Link } from 'react-router-dom'; */
 import Users from '../../components/users';
 import Albums from '../../components/albums';
 
@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <div className='home'>
       <section className='profiles'>
-        <h3>Profiles</h3>
+        <h3>Users</h3>
         <Users onProfileClick={handleProfileClick}/>
       </section>
       <section className='albums'>
@@ -32,7 +32,7 @@ const Home = () => {
           ) : (
             <p>Loading...</p>
           )}
-          <Link to='/profile'>View Profile?</Link>
+          {/* <Link to='/profile'>View Profile?</Link> */}
         </div>
         <Albums userId={selectedUserId} userName={selectedUserName}/>
       </section>

@@ -38,8 +38,8 @@ const Login = () => {
   
 
   return (
-    <button onClick={() => login()} style={{ background: "red", color: 'white', padding: '10px' }}>
-      Sign in with Google
+    <button onClick={() => login()} style={{background:'#fff', padding: '10px', borderRadius:'30px' }}>
+       <i className="bi bi-google"> Sign in with Google</i>
     </button>
   );
 };
