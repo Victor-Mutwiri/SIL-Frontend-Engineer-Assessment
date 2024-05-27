@@ -121,6 +121,37 @@ body {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   }
   
+
+  @media (max-width:430px){
+    .home{
+        display: flex;
+        flex-direction: column;
+        /* padding: 5px; */
+        align-items: center;
+        /* align-self: center; */
+    }
+    .home .profile-card{
+        display: flex;
+        flex-direction: column;
+    }
+    .home .userdetails{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: 0 10px;
+    }
+    .home .userdetails .profiles{
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+    }
+    .home .userdetails .albums{
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+    }
+  }
+
   @media (max-width: 768px) {
     .home {
       padding: 10px;

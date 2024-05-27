@@ -32,6 +32,7 @@ const Albums = ({ userId, userName }) => {
       {userId ? (
         <>
           <h3>{userName} has {albums.length} albums <i className="bi bi-disc-fill"/>:</h3>
+          <Link to={`/profiles/${userId}`}>View {userName}'s' profile</Link>
           <ul>
             {albums.map((album, index) => (
               <li key={index} className='singles'>

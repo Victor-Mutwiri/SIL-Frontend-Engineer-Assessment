@@ -3,6 +3,7 @@ import { UserContext } from '../../components/Usercontext';
 import './Home.css';
 import Users from '../../components/users';
 import Albums from '../../components/albums';
+import Logout from '../../components/logout';
 
 const Home = () => {
   const { user } = useContext(UserContext);
@@ -25,7 +26,7 @@ const Home = () => {
         ) : (
           <p>Loading...</p>
         )}
-        <button><i className="bi bi-box-arrow-in-right"> Sign Out</i></button>
+        <Logout/>
       </div>
       <div className='userdetails'>
         <section className='profiles'>

@@ -17,6 +17,7 @@ const App = () => {
             <Route path="/home" element={<Home/>}/>
             <Route path="/profile" element={<Profile/>}/>
             <Route path="/albums/:albumId" element={<AlbumDetails/>}/>
+            <Route path="/profiles/:userId" element={<Profile/>}/>
           </Routes>
         </BrowserRouter>
       </UserProvider>

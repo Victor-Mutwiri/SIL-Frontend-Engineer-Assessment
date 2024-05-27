@@ -13,7 +13,7 @@ const Landing = () => {
                 </p>
             <div>
                 <p>Renders free-plan for hosting projects deactivates the backend system while not in use.
-                    Upon loading the landing page for the first time, the system takes approximately 1 minutes to spin the backend server
+                    Upon loading the landing page for the first time, the system takes approximately 1 minute to spin the backend server
                     hence the timer!
                     However, one can still proceed to signup however no information will be displayed until the period ends
                 </p>
@@ -27,10 +27,8 @@ const Landing = () => {
             <div className="login">
                 <Login/>
             </div>
-            
+            <a href="https://github.com/Victor-Mutwiri/SIL-Frontend-Engineer-Assessment"><i className="bi bi-github"/></a>
         </section>
-        
-        
     </div>
   )
 }
