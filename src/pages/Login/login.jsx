@@ -5,8 +5,9 @@ import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../components/Usercontext";
 
 const Login = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { setUser } = useContext(UserContext);
+
   const login = useGoogleLogin({
     onSuccess: async (response) => {
       try {
@@ -18,7 +19,6 @@ const Login = () => {
             },
           }
         );
-        console.log(res);
         const userData = {
           name: res.data.name,
           picture: res.data.picture,
@@ -35,7 +35,6 @@ const Login = () => {
       window.alert('Login failed. Please try again.');
     }
   });
-  
 
   return (
     <button onClick={() => login()} style={{background:'#fff', padding: '10px', borderRadius:'30px' }}>
@@ -45,4 +44,3 @@ const Login = () => {
 };
 
 export default Login;
-
