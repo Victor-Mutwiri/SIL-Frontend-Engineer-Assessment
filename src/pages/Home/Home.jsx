@@ -1,8 +1,6 @@
-import { useState } from 'react';
-import { useContext } from 'react';
+import { useState, useContext } from 'react';
 import { UserContext } from '../../components/Usercontext';
 import './Home.css';
-/* import { Link } from 'react-router-dom'; */
 import Users from '../../components/users';
 import Albums from '../../components/albums';
 
@@ -18,24 +16,26 @@ const Home = () => {
 
   return (
     <div className='home'>
-      <section className='profiles'>
-        <h3>Users</h3>
-        <Users onProfileClick={handleProfileClick}/>
-      </section>
-      <section className='albums'>
-        <div className='profile-card'>
-          {user ? (
-            <div className="profile">
-              <img src={user.picture} alt={user.name} />
-              <h4>{user.name}</h4>
-            </div>
-          ) : (
-            <p>Loading...</p>
-          )}
-          {/* <Link to='/profile'>View Profile?</Link> */}
-        </div>
-        <Albums userId={selectedUserId} userName={selectedUserName}/>
-      </section>
+      <div className='profile-card'>
+        {user ? (
+          <div className="profile">
+            <img src={user.picture} alt={user.name} />
+            <h4>{user.name}</h4>
+          </div>
+        ) : (
+          <p>Loading...</p>
+        )}
+        <button><i className="bi bi-box-arrow-in-right"> Sign Out</i></button>
+      </div>
+      <div className='userdetails'>
+        <section className='profiles'>
+          <h3>Users</h3>
+          <Users onProfileClick={handleProfileClick}/>
+        </section>
+        <section className='albums'>
+          <Albums userId={selectedUserId} userName={selectedUserName}/>
+        </section>
+      </div>
     </div>
   );
 };

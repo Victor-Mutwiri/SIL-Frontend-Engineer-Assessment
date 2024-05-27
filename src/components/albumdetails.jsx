@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import './albumdetails.css'
+import './albumdetails.css';
 
 const AlbumDetails = () => {
   const { albumId } = useParams();
@@ -30,10 +30,12 @@ const AlbumDetails = () => {
 
   return (
     <div className='albumdetails'>
-        <h3>Album: {No}</h3>
-        <img src={imageUrl} alt={Title} />
+      <h3>Album: {No}</h3>
+      <img src={imageUrl} alt={Title} />
+      <div className="details">
         <h4>{Title}</h4>
         <h5>Artist: {Artist}</h5>
+      </div>
     </div>
   );
 };
