@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import Profile from "./pages/Profile/Profile";
 import { UserProvider } from "./components/Usercontext";
 import AlbumDetails from "./components/albumdetails";
+import NotFound from "./pages/NotFound/NotFound";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/profile" element={<Profile/>}/>
             <Route path="/albums/:albumId" element={<AlbumDetails/>}/>
             <Route path="/profiles/:userId" element={<Profile/>}/>
+            <Route path="*" element={<NotFound/>} />
           </Routes>
         </BrowserRouter>
       </UserProvider>
