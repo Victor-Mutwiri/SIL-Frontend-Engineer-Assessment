@@ -10,7 +10,8 @@ const Albums = ({ userId, userName }) => {
   useEffect(() => {
     const fetchAlbums = async () => {
       try {
-        const response = await axios.get(`http://localhost:1337/api/profiles/${userId}?populate=albums`);
+        /* const response = await axios.get(`http://localhost:1337/api/profiles/${userId}?populate=albums`); */
+        const response = await axios.get(`${import.meta.env.DEV ? import.meta.env.VITE_DEV_API_BASE_URL : import.meta.env.VITE_PROD_API_BASE_URL}/profiles/${userId}?populate=albums`);
         const albumsData = response.data.data.attributes.albums.data.map(album => ({
           id: album.id,
           number: album.attributes.No,

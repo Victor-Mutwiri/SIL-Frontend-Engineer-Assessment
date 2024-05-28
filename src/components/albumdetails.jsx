@@ -10,7 +10,8 @@ const AlbumDetails = () => {
   useEffect(() => {
     const fetchAlbumDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:1337/api/albums/${albumId}?populate=photo`);
+        /* const response = await axios.get(`http://localhost:1337/api/albums/${albumId}?populate=photo`); */
+        const response = await axios.get(`${import.meta.env.DEV ? import.meta.env.VITE_DEV_API_BASE_URL : import.meta.env.VITE_PROD_API_BASE_URL}/albums/${albumId}?populate=photo`);
         const albumData = response.data.data;
         setAlbum(albumData);
       } catch (error) {

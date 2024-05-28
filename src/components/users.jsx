@@ -9,7 +9,9 @@ const Users = ({ onProfileClick }) => {
   useEffect(() => {
     const fetchProfiles = async () => {
       try {
-        const response = await axios.get('http://localhost:1337/api/profiles');
+        const response = await axios.get(`${import.meta.env.DEV ? import.meta.env.VITE_DEV_API_BASE_URL : import.meta.env.VITE_PROD_API_BASE_URL}/profiles`);
+        /* const response = await axios.get('http://localhost:1337/api/profiles'); */
+        
         const profiles = response.data.data.map(profile => ({
           id: profile.id,
           name: profile.attributes.name,
